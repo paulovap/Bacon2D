@@ -61,7 +61,9 @@ SOURCES += entity.cpp \
 else: target.path = $$[QT_INSTALL_QML]/$$replace(TARGETPATH, \\., /).$$API_VER
 ;
 
-QMLFILES += $$PWD/PhysicsEntity.qml \
+QMLFILES += \
+            $$PWD/InfiniteScrollItem.qml \
+            $$PWD/PhysicsEntity.qml \
             $$PWD/BoxBody.qml \
             $$PWD/ChainBody.qml \
             $$PWD/CircleBody.qml \
@@ -91,3 +93,4 @@ export(qmlplugin.commands)
 
 QMAKE_EXTRA_TARGETS += first qmlplugin
 INSTALLS += target qmltypes qmlpluginfiles
+
